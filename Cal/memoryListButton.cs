@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Cal
 {
-    public partial class Form2 : Form
+    public partial class memoryListButton : Form
     {
-        public Form2()
+        public memoryListButton()
         {
             InitializeComponent();
         }
