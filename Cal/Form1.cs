@@ -109,5 +109,38 @@ namespace Cal
             calculator.Backspace(); // Calculator의 Backspace 메서드 호출
             UpdateDisplay(); // 디스플레이 업데이트
         }
+
+        private void reciprocalButton_Click(object sender, EventArgs e)
+        {
+            //string advance_result = advance.Reciprocal(calculator.CurrentInput);
+            //UpdateDisplay();
+            //textboxResult.Text = advance_result; 
+            //textBoxCalculation.Text = $"1/{calculator.CurrentInput}";
+            textBoxCalculation.Text = $"1/{textboxResult.Text}"; // 계산 내역 표시
+            string advance_str = advance.Reciprocal(textboxResult.Text);
+            textboxResult.Text = advance_str; // 현재 입력 표시
+
+        }
+
+        private void squareButton_Click(object sender, EventArgs e)
+        {
+            textBoxCalculation.Text = $"sqr({textboxResult.Text})"; // 계산 내역 표시
+            string advance_str = advance.Square(textboxResult.Text); 
+            textboxResult.Text = advance_str; // 현재 입력 표시
+        }
+
+        private void squareRootButton_Click(object sender, EventArgs e)
+        {
+            textBoxCalculation.Text = $"sqrt({textboxResult.Text})"; // 계산 내역 표시
+            string advance_str = advance.SquareRoot(textboxResult.Text);
+            textboxResult.Text = advance_str; // 현재 입력 표시
+        }
+
+        private void signChangeButton_Click(object sender, EventArgs e)
+        {
+            textBoxCalculation.Text = $"negate({textboxResult.Text})"; // 계산 내역 표시
+            string advance_str = advance.SignChange(textboxResult.Text);
+            textboxResult.Text = advance_str; // 현재 입력 표시
+        }
     }
 }
