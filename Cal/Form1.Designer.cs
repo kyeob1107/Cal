@@ -95,6 +95,7 @@
             this.backspaceButton.Size = new System.Drawing.Size(75, 23);
             this.backspaceButton.TabIndex = 3;
             this.backspaceButton.UseVisualStyleBackColor = false;
+            this.backspaceButton.Click += new System.EventHandler(this.backspaceButton_Click);
             // 
             // divideButton
             // 

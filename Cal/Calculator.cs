@@ -13,6 +13,14 @@ namespace Cal
         private bool isEqualsPressed; // '=' 버튼이 눌렸는지 여부
 
         public bool CanCalculate => !isEqualsPressed; // 계산 가능 여부를 반환
+        public void Backspace()
+        {
+            if (!string.IsNullOrEmpty(CurrentInput))
+            {
+                // 입력된 값에서 마지막 문자를 제거
+                CurrentInput = CurrentInput.Substring(0, CurrentInput.Length - 1);
+            }
+        }
 
         // 숫자 추가 메서드
         public void AppendDigit(string digit)

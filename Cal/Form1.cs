@@ -99,5 +99,11 @@ namespace Cal
             calculator.CalculatePercentage(); // 백분율 계산
             UpdateDisplay(); // 디스플레이 업데이트
         }
+
+        private void backspaceButton_Click(object sender, EventArgs e)
+        {
+            calculator.Backspace(); // Calculator의 Backspace 메서드 호출
+            UpdateDisplay(); // 디스플레이 업데이트
+        }
     }
 }
