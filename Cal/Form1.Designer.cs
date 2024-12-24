@@ -56,8 +56,6 @@
             this.textboxResult = new System.Windows.Forms.TextBox();
             this.textBoxCalculation = new System.Windows.Forms.TextBox();
             this.button31 = new System.Windows.Forms.Button();
-            this.button32 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // percentButton
@@ -68,6 +66,7 @@
             this.percentButton.TabIndex = 0;
             this.percentButton.Text = "%";
             this.percentButton.UseVisualStyleBackColor = true;
+            this.percentButton.Click += new System.EventHandler(this.percentButton_Click);
             // 
             // clearEntryButton
             // 
@@ -302,31 +301,11 @@
             this.button31.Text = "History";
             this.button31.UseVisualStyleBackColor = true;
             // 
-            // button32
-            // 
-            this.button32.Location = new System.Drawing.Point(19, 23);
-            this.button32.Name = "button32";
-            this.button32.Size = new System.Drawing.Size(50, 23);
-            this.button32.TabIndex = 38;
-            this.button32.Text = "button32";
-            this.button32.UseVisualStyleBackColor = true;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox3.Location = new System.Drawing.Point(75, 23);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(66, 21);
-            this.textBox3.TabIndex = 39;
-            this.textBox3.Text = "Standard";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(362, 346);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.button32);
             this.Controls.Add(this.button31);
             this.Controls.Add(this.textBoxCalculation);
             this.Controls.Add(this.textboxResult);
@@ -391,8 +370,6 @@
         private System.Windows.Forms.TextBox textboxResult;
         private System.Windows.Forms.TextBox textBoxCalculation;
         private System.Windows.Forms.Button button31;
-        private System.Windows.Forms.Button button32;
-        private System.Windows.Forms.TextBox textBox3;
     }
 }
 

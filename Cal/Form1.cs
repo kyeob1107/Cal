@@ -17,7 +17,6 @@ namespace Cal
         // 버튼 이벤트를 할당하는 메서드
         private void AssignButtonEvents()
         {
-            // 숫자 버튼 이벤트
             digitButton0.Click += DigitButton_Click;
             digitButton1.Click += DigitButton_Click;
             digitButton2.Click += DigitButton_Click;
@@ -25,24 +24,23 @@ namespace Cal
             digitButton4.Click += DigitButton_Click;
             digitButton5.Click += DigitButton_Click;
             digitButton6.Click += DigitButton_Click;
-            digitButton7.Click += DigitButton_Click;
+            digitButton7.Click += DigitButton_Click; 
             digitButton8.Click += DigitButton_Click;
             digitButton9.Click += DigitButton_Click;
 
-            // 소수점 버튼 이벤트
             decimalPointButton.Click += DigitButton_Click;
 
-            // 연산자 버튼 이벤트
             addButton.Click += OperationButton_Click;
             subtractButton.Click += OperationButton_Click;
             multiplyButton.Click += OperationButton_Click;
             divideButton.Click += OperationButton_Click;
 
-            // 기타 버튼 이벤트
-            equalsButton.Click += EqualsButton_Click; // '=' 버튼
-            clearButton.Click += ClearButton_Click; // 전체 지우기 버튼
-            clearEntryButton.Click += ClearEntryButton_Click; // 입력 지우기 버튼
+            equalsButton.Click += EqualsButton_Click;
+            clearButton.Click += ClearButton_Click;
+            clearEntryButton.Click += ClearEntryButton_Click;
+
         }
+
 
         // 숫자 버튼 클릭 이벤트 처리
         private void DigitButton_Click(object sender, EventArgs e)
@@ -94,6 +92,12 @@ namespace Cal
         
         private void textBoxCalculation_TextChanged(object sender, EventArgs e)
         {
+        }
+
+        private void percentButton_Click(object sender, EventArgs e)
+        {
+            calculator.CalculatePercentage(); // 백분율 계산
+            UpdateDisplay(); // 디스플레이 업데이트
         }
     }
 }
