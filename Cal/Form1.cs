@@ -6,11 +6,13 @@ namespace Cal
     public partial class Form1 : Form
     {
         private Calculator calculator; // 계산 로직을 처리할 Calculator 인스턴스
+        private Advance advance; // 추가적인 계산 로직 처리할 Advance 인스턴스
 
         public Form1()
         {
             InitializeComponent();
             calculator = new Calculator(); // Calculator 초기화
+            advance = new Advance(); // Advance 초기화
             AssignButtonEvents(); // 버튼 이벤트 할당
         }
 
@@ -83,6 +85,8 @@ namespace Cal
             calculator.ClearEntry(); // 현재 입력 초기화
             UpdateDisplay(); // 디스플레이 업데이트
         }
+
+
 
         // 디스플레이를 업데이트하는 메서드
         private void UpdateDisplay()
