@@ -13,6 +13,14 @@ namespace Cal
         private bool isEqualsPressed; // '=' 버튼이 눌렸는지 여부
 
         public bool CanCalculate => !isEqualsPressed; // 계산 가능 여부를 반환
+        public void Backspace()
+        {
+            if (!string.IsNullOrEmpty(CurrentInput))
+            {
+                // 입력된 값에서 마지막 문자를 제거
+                CurrentInput = CurrentInput.Substring(0, CurrentInput.Length - 1);
+            }
+        }
 
         // 숫자 추가 메서드
         public void AppendDigit(string digit)
@@ -31,6 +39,41 @@ namespace Cal
 
             CurrentInput += digit; // 입력에 숫자나 소수점 추가
         }
+
+        public void CalculatePercentage()
+        {
+            if (string.IsNullOrEmpty(CurrentInput) || string.IsNullOrEmpty(operand1))
+                return; // 입력값이 없으면 실행하지 않음
+
+            double num1, num2;
+            double.TryParse(operand1, out num1); // 첫 번째 피연산자 변환
+            double.TryParse(CurrentInput, out num2); // 현재 입력 값 변환
+
+            switch (operation)
+            {
+                case '+':
+                case '-':
+                    // 덧셈/뺄셈: 기준값(num1)의 백분율(num2)을 계산
+                    CurrentInput = (num1 * (num2 / 100)).ToString();
+                    break;
+
+                case '*':
+                    // 곱셈: 기준값(num1) * (입력값의 백분율)
+                    CurrentInput = (num1 * (num2 / 100)).ToString();
+                    break;
+
+                case '/':
+                    // 나눗셈: 기준값(num1)을 입력값의 백분율로 나눔
+                    if (num2 != 0)
+                        CurrentInput = (num1 / (num2 / 100)).ToString();
+                    break;
+            }
+
+            isEqualsPressed = false; // 다음 입력에 영향을 주지 않도록 초기화
+        }
+
+
+
 
         // 연산자 설정 메서드
         public void SetOperation(char op)
