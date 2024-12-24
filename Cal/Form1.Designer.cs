@@ -53,12 +53,6 @@
             this.decimalPointButton = new System.Windows.Forms.Button();
             this.digitButton0 = new System.Windows.Forms.Button();
             this.signChangeButton = new System.Windows.Forms.Button();
-            this.button29 = new System.Windows.Forms.Button();
-            this.button25 = new System.Windows.Forms.Button();
-            this.button26 = new System.Windows.Forms.Button();
-            this.button27 = new System.Windows.Forms.Button();
-            this.button28 = new System.Windows.Forms.Button();
-            this.button30 = new System.Windows.Forms.Button();
             this.textboxResult = new System.Windows.Forms.TextBox();
             this.textBoxCalculation = new System.Windows.Forms.TextBox();
             this.button31 = new System.Windows.Forms.Button();
@@ -283,63 +277,9 @@
             this.signChangeButton.Text = "+/-";
             this.signChangeButton.UseVisualStyleBackColor = true;
             // 
-            // button29
-            // 
-            this.button29.Location = new System.Drawing.Point(287, 134);
-            this.button29.Name = "button29";
-            this.button29.Size = new System.Drawing.Size(50, 23);
-            this.button29.TabIndex = 29;
-            this.button29.Text = "button29";
-            this.button29.UseVisualStyleBackColor = true;
-            // 
-            // button25
-            // 
-            this.button25.Location = new System.Drawing.Point(233, 134);
-            this.button25.Name = "button25";
-            this.button25.Size = new System.Drawing.Size(50, 23);
-            this.button25.TabIndex = 30;
-            this.button25.Text = "button25";
-            this.button25.UseVisualStyleBackColor = true;
-            // 
-            // button26
-            // 
-            this.button26.Location = new System.Drawing.Point(127, 134);
-            this.button26.Name = "button26";
-            this.button26.Size = new System.Drawing.Size(50, 23);
-            this.button26.TabIndex = 32;
-            this.button26.Text = "button26";
-            this.button26.UseVisualStyleBackColor = true;
-            // 
-            // button27
-            // 
-            this.button27.Location = new System.Drawing.Point(181, 134);
-            this.button27.Name = "button27";
-            this.button27.Size = new System.Drawing.Size(50, 23);
-            this.button27.TabIndex = 31;
-            this.button27.Text = "button27";
-            this.button27.UseVisualStyleBackColor = true;
-            // 
-            // button28
-            // 
-            this.button28.Location = new System.Drawing.Point(19, 134);
-            this.button28.Name = "button28";
-            this.button28.Size = new System.Drawing.Size(50, 23);
-            this.button28.TabIndex = 34;
-            this.button28.Text = "button28";
-            this.button28.UseVisualStyleBackColor = true;
-            // 
-            // button30
-            // 
-            this.button30.Location = new System.Drawing.Point(73, 134);
-            this.button30.Name = "button30";
-            this.button30.Size = new System.Drawing.Size(50, 23);
-            this.button30.TabIndex = 33;
-            this.button30.Text = "button30";
-            this.button30.UseVisualStyleBackColor = true;
-            // 
             // textboxResult
             // 
-            this.textboxResult.Font = new System.Drawing.Font("Gulim", 20F);
+            this.textboxResult.Font = new System.Drawing.Font("굴림", 20F);
             this.textboxResult.Location = new System.Drawing.Point(210, 79);
             this.textboxResult.Name = "textboxResult";
             this.textboxResult.Size = new System.Drawing.Size(123, 38);
@@ -351,6 +291,7 @@
             this.textBoxCalculation.Name = "textBoxCalculation";
             this.textBoxCalculation.Size = new System.Drawing.Size(166, 21);
             this.textBoxCalculation.TabIndex = 36;
+            this.textBoxCalculation.TextChanged += new System.EventHandler(this.textBoxCalculation_TextChanged);
             // 
             // button31
             // 
@@ -372,7 +313,7 @@
             // 
             // textBox3
             // 
-            this.textBox3.Font = new System.Drawing.Font("Gulim", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox3.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textBox3.Location = new System.Drawing.Point(75, 23);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(66, 21);
@@ -389,12 +330,6 @@
             this.Controls.Add(this.button31);
             this.Controls.Add(this.textBoxCalculation);
             this.Controls.Add(this.textboxResult);
-            this.Controls.Add(this.button28);
-            this.Controls.Add(this.button30);
-            this.Controls.Add(this.button26);
-            this.Controls.Add(this.button27);
-            this.Controls.Add(this.button25);
-            this.Controls.Add(this.button29);
             this.Controls.Add(this.equalsButton);
             this.Controls.Add(this.decimalPointButton);
             this.Controls.Add(this.digitButton0);
@@ -453,12 +388,6 @@
         private System.Windows.Forms.Button decimalPointButton;
         private System.Windows.Forms.Button digitButton0;
         private System.Windows.Forms.Button signChangeButton;
-        private System.Windows.Forms.Button button29;
-        private System.Windows.Forms.Button button25;
-        private System.Windows.Forms.Button button26;
-        private System.Windows.Forms.Button button27;
-        private System.Windows.Forms.Button button28;
-        private System.Windows.Forms.Button button30;
         private System.Windows.Forms.TextBox textboxResult;
         private System.Windows.Forms.TextBox textBoxCalculation;
         private System.Windows.Forms.Button button31;
