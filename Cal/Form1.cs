@@ -1,6 +1,11 @@
 ﻿using System;
 using System.Windows.Forms;
 
+// lamda식쓰는 것과 구조체 사용연습을 위해서 따로 branch생성하고 거기서 일부 변경하여 연습
+// lamda식은 reciprocal, square, squareRoot, signChange를 기존 함수에서 lamda방식으로 변경
+// 구조체 사용은 Calculator에 있던 변수들(operand1, operand2, operation, result, isEqualsPressed)
+// 을 Calculator.cs에서 구조체로 따로 생성하여 넣어주고 Calculator클래스에서 사용하는 방식으로 변경
+
 namespace Cal
 {
     public partial class Form1 : Form
@@ -117,30 +122,44 @@ namespace Cal
             //textboxResult.Text = advance_result; 
             //textBoxCalculation.Text = $"1/{calculator.CurrentInput}";
             textBoxCalculation.Text = $"1/{textboxResult.Text}"; // 계산 내역 표시
-            string advance_str = advance.Reciprocal(textboxResult.Text);
-            textboxResult.Text = advance_str; // 현재 입력 표시
+            
+            //lamda방식으로 변경
+            double Num = double.Parse(textboxResult.Text);
+            textboxResult.Text = advance.Reciprocal_lamda(Num);
 
         }
 
         private void squareButton_Click(object sender, EventArgs e)
         {
             textBoxCalculation.Text = $"sqr({textboxResult.Text})"; // 계산 내역 표시
-            string advance_str = advance.Square(textboxResult.Text); 
-            textboxResult.Text = advance_str; // 현재 입력 표시
+            //string advance_str = advance.Square(textboxResult.Text); 
+            //textboxResult.Text = advance_str; // 현재 입력 표시
+
+            //lamda방식으로 변경
+            double Num = double.Parse(textboxResult.Text);
+            textboxResult.Text = advance.Square_lamda(Num);
         }
 
         private void squareRootButton_Click(object sender, EventArgs e)
         {
             textBoxCalculation.Text = $"sqrt({textboxResult.Text})"; // 계산 내역 표시
-            string advance_str = advance.SquareRoot(textboxResult.Text);
-            textboxResult.Text = advance_str; // 현재 입력 표시
+            //string advance_str = advance.SquareRoot(textboxResult.Text);
+            //textboxResult.Text = advance_str; // 현재 입력 표시
+
+            //lamda방식으로 변경
+            double Num = double.Parse(textboxResult.Text);
+            textboxResult.Text = advance.SquareRoot_lamda(Num);
         }
 
         private void signChangeButton_Click(object sender, EventArgs e)
         {
             textBoxCalculation.Text = $"negate({textboxResult.Text})"; // 계산 내역 표시
-            string advance_str = advance.SignChange(textboxResult.Text);
-            textboxResult.Text = advance_str; // 현재 입력 표시
+            //string advance_str = advance.SignChange(textboxResult.Text);
+            //textboxResult.Text = advance_str; // 현재 입력 표시
+
+            //lamda방식으로 변경
+            double Num = double.Parse(textboxResult.Text);
+            textboxResult.Text = advance.SignChange_lamda(Num);
         }
     }
 }

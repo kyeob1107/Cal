@@ -8,6 +8,10 @@ namespace Cal
 {
     internal class Advance
     {
+        public string Reciprocal_lamda(double num) => (1 / num).ToString();
+        public string Square_lamda(double num) => (num * num).ToString();
+        public string SquareRoot_lamda(double num) => (Math.Sqrt(num)).ToString();
+        public string SignChange_lamda(double num) => (-1 * num).ToString();
         public string Reciprocal(string strNumber)
         {
             double Number = double.Parse(strNumber);
@@ -15,6 +19,7 @@ namespace Cal
 
             return Number.ToString();
         }
+
         public string Square(string strNumber)
         {
             double Number = double.Parse(strNumber);
